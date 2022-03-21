@@ -24,14 +24,13 @@ def runCommand (command):
 
 def setup():
     if sys.platform.startswith("win"):
-        os.system("more init.txt")
+        os.system("del ./app.json")
+        os.system("del ./renovate.json")
+        os.system("del ./Logs.log")
+        os.system("del ./.circleci/")
+        os.system("del ./.github/")
+        os.system("del ./package-lock.json")
         os.system("echo off")
-        os.system("pip install tqdm")
-        from tqdm import tqdm
-        for i in tqdm (range (101), 
-                    desc="Installing...", 
-                    ascii=False, ncols=100):
-            time.sleep(0.10)
         os.system("npm i -G yarn") 
         os.system("yarn")   
         os.system("echo on")                  
