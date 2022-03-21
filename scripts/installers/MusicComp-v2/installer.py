@@ -39,14 +39,6 @@ def setup():
         print ("\n\n")
 
     elif sys.platform.startswith("linux"):
-        output = runCommand (["pip", "install", "tqdm"])
-        from tqdm import tqdm
-        os.system("cat init.txt")
-        print("\n\n")
-        for i in tqdm (range (101), 
-                    desc="Installing...", 
-                    ascii=False, ncols=100):
-            time.sleep(0.10)
         output = runCommand (["rm", "./app.json"])
         output = runCommand (["rm", "./renovate.json"])
         output = runCommand (["rm", "./Logs.log"])
