@@ -47,7 +47,7 @@ def setup():
         output = runCommand (["rm", "./package-lock.json"])
         output = runCommand (["npm", "i", "-G", "yarn"])
         output = runCommand (["yarn"])
-        output = runCommandStats (["yarn", "start"])
+        output = runCommandStats (["node", "index"])
         print ("\n\n")
         print (output.stdout.decode("utf-8"))                                        
 
